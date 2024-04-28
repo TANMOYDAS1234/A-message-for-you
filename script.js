@@ -1,3 +1,13 @@
+let docTitle = document.title;
+
+window.addEventListener("blur", () => {
+    document.title = "Come Back Please 🥺";
+})
+
+window.addEventListener("focus", () => {
+    document.title = docTitle;
+})
+
 let no = document.getElementById("noBtn");
 let yes = document.getElementById("yesBtn");
 
@@ -7,7 +17,7 @@ window.onload = function () {
         let msg = document.querySelector(".msg");
         let img = document.querySelector(".img");
         let btnBox = document.querySelector(".btnbox");
-        msg.innerHTML = "Hehehe, I knew it! 😁😘💖";
+        msg.innerHTML = "Hehehe, I knew it! 😁💖";
         img.src = "happy.gif";
         btnBox.style.visibility = "hidden";
     });
@@ -26,7 +36,7 @@ window.onload = function () {
         moveNoBtn();
     });
 
-    no.addEventListener("click", () => {
+    no.addEventListener("touchenter", () => {
         moveNoBtn();
     });
 }
